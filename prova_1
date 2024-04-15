@@ -24,7 +24,7 @@ int main(void) {
     if (portaEscolhida == portaPremiada) {
         printf("Você ganhou!\n");
     } else {
-        printf("Você perdeu!\nQuer escolher outra porta?\nDigite!(s/n)");
+        printf("Você perdeu\nA porta escolhida era vazia!\nQuer escolher outra porta?\nDigite!(s/n)");
         
     char opcao;
     scanf(" %c", &opcao);
@@ -34,7 +34,7 @@ printf("Você perdeu!\nObrigado por jogar\nA porta premiada foi %d!", portaPremi
     }
 
     if (opcao == 's') {
-        printf("Escolha uma porta (1, 2, or 3): ");}
+        printf("Escolha uma porta diferente da primeira ");}
         int portaEscolhida;
     scanf("%d", &portaEscolhida);
        if (portaEscolhida == portaPremiada) {
