@@ -1,0 +1,48 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main(void) {
+    
+    srand(time(NULL));
+
+    
+    int portaPremiada = rand() % 3 + 1;
+
+  
+    printf("Bem vindo ao jogo!\nEscolha uma porta (1, 2, or 3): ");
+    int portaEscolhida;
+    scanf("%d", &portaEscolhida);
+
+   
+    int portaVazia;
+    do {
+        portaVazia = rand() % 3 + 1;
+    } while (portaVazia == portaEscolhida || portaVazia == portaPremiada);
+
+
+    if (portaEscolhida == portaPremiada) {
+        printf("Você ganhou!\n");
+    } else {
+        printf("Você perdeu!\nQuer escolher outra porta?\nDigite!(s/n)");
+        
+    char opcao;
+    scanf(" %c", &opcao);
+
+    if (opcao == 'n') {
+printf("Você perdeu!\nObrigado por jogar\nA porta premiada foi %d!", portaPremiada);
+    }
+
+    if (opcao == 's') {
+        printf("Escolha uma porta (1, 2, or 3): ");}
+        int portaEscolhida;
+    scanf("%d", &portaEscolhida);
+       if (portaEscolhida == portaPremiada) {
+        printf("Você ganhou!\n");
+    } else {
+        printf("Você perdeu!\nObrigado por jogar\nA porta premiada foi %d!", portaPremiada);
+        }
+    }
+
+    return 0;
+} 
